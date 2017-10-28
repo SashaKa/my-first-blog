@@ -12,7 +12,7 @@
         <div class="header">
             <H1>Hello, folks, I'm a carbon atom.</H1>
         </div>
-        <div class="main">
+        <!-- <div class="main">
             <p class="main-time-published">published: 26.10.2018, 17:35</p>
             <h2 class="main-head-post">
                 <a class="main-head-post_link-post" href="#">My first post</a>
@@ -26,7 +26,16 @@
                
             </p>
         </div>
-        <div class="footer"></div>
+        <div class="footer"></div> -->
+         {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h1>
+                <a href="">{{ post.title }}</a>
+            </h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+        {% endfor %}
     </div>
     
 </body>
